@@ -27,8 +27,8 @@
         function redirect(goTo){
             let idc = localStorage.getItem('card')
             localStorage.clear();
-            goTo == 'login'? location.href="/s/login/":
-            goTo == 'main' ? location.href=`/s/card/?card=${idc}`:''
+            goTo == 'login'? location.href="./s/login/":
+            goTo == 'main' ? location.href=`./s/card/?card=${idc}`:''
         }
     </script>
 </body>    
