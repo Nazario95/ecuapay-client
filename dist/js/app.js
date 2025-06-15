@@ -204,7 +204,7 @@ async function loadAllTrx() {
                                     <small class="text-warning">Nota:</small><br>
                                     <p class="text-light">
                                         <!-- good -->
-                                        ${statusPayment==1?' Su pago de -500 XAF se ha realizado correctamente en la plataforma Shein.':''}
+                                        ${statusPayment==1?` Su pago de -${formatNumbWithPoint(totalPaid)} XAF se ha realizado correctamente en la plataforma ${storeName}.`:''}
                                        
                                     </p>
                                     <p class="text-danger">
