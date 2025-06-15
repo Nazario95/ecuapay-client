@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecuapay</title>
+    <style>body{ background-color: #05051f!important;}</style>
+</head>
+<body>    
+    <script>
+        const urlParm = new URLSearchParams(location.search)
+        chckValidSesionData() ? redirect('login') : redirect('main')        
+       
+        function chckValidSesionData(){
+            let goToLogin = false;
+
+            if(urlParm.size > 0){
+                urlParm.forEach((v,k)=>{
+                    v='true'?goToLogin = false:'';
+                })
+            }  
+            else{goToLogin = true}    
+            return goToLogin;
+        }
+
+        // redirection
+        function redirect(goTo){
+            let idc = localStorage.getItem('card')
+            localStorage.clear();
+            goTo == 'login'? location.href="/s/login/":
+            goTo == 'main' ? location.href=`/s/card/?card=${idc}`:''
+        }
+    </script>
+</body>    
+</html>
+

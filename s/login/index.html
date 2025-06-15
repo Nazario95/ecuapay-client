@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecuapay</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+
+        body{ 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #05051f!important;
+        }
+        div{text-align: center;}
+        h3,p{color: aliceblue; text-align: center;}
+        .d-none{
+            display: none;
+        }
+        .form {
+            --width-of-input: 300px;
+            --border-height: 1px;
+            --border-before-color: rgba(221, 221, 221, 0.39);
+            --border-after-color: #5891ff;
+            --input-hovered-color: #4985e01f;
+            position: relative;
+            width: var(--width-of-input);
+           }
+           /* styling of Input */
+           .input {
+            color: #fff;
+            font-size: 0.9rem;
+            background-color: transparent;
+            width: 100%;
+            box-sizing: border-box;
+            padding-inline: 0.5em;
+            padding-block: 0.7em;
+            border: none;
+            border-bottom: var(--border-height) solid var(--border-before-color);
+           }
+           /* styling of animated border */
+           .input-border {
+            position: absolute;
+            background: var(--border-after-color);
+            width: 0%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            transition: 0.3s;
+           }
+           /* Hover on Input */
+           input:hover {
+            background: var(--input-hovered-color);
+           }
+           
+           input:focus {
+            outline: none;
+           }
+           /* here is code of animated border */
+           input:focus ~ .input-border {
+            width: 100%;
+           }
+           #gt{
+            margin-top: .8rem;
+            padding: 6px 10px;
+            background-color: transparent;
+            border: 1px solid grey;
+            border-radius: 8px;
+            color: aliceblue;
+           }
+
+           #gt:hover{
+            background-color: white;
+            color: #05051f;
+            cursor: pointer;
+           }
+
+           .lk-home{
+            color:darkgoldenrod;
+            cursor: pointer;
+            text-decoration: underline;
+           }
+
+           .txt-warning{color:darkgoldenrod;}
+    </style>
+</head>
+<body>
+    <div>
+        <!-- <img src="../../dist/svg/load.svg"> -->
+        <div class="errors txt-warning">
+            
+        </div>       
+    </div>
+
+    <div id="code-html"></div>
+    <footer>
+        <p>
+            <small>Tech by @Nazzareg (+240) 555-712-824</small>
+        </p>        
+    </footer>
+    <!-- <script src="./client.base.min.js"></script>
+    <script>
+        const client = new ClientJS();
+        const fingerprint = client.getFingerprint();
+       !localStorage.getItem('figerPrint')? localStorage.setItem('figerPrint',`${fingerprint}`):console.log('hash existente');
+    </script> -->
+    <script src="./logbootstrap.js" type="module"></script>
+    
+</body>    
+</html>
+
