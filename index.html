@@ -19,14 +19,21 @@
                     v='true'?goToLogin = false:'';
                 })
             }  
-            else{goToLogin = true}    
-            return goToLogin;
+            else if(urlParm.size <= 0){
+                let idc = localStorage.getItem('card');
+                let st = localStorage.getItem('activity');
+                if(idc&&st){
+                    location.href=`./s/card/?card=${idc}`;
+                }
+                else{
+                    goToLogin = true
+                    return goToLogin;
+                }                
+            } 
         }
-
         // redirection
         function redirect(goTo){
             let idc = localStorage.getItem('card')
-            localStorage.clear();
             goTo == 'login'? location.href="./s/login/":
             goTo == 'main' ? location.href=`./s/card/?card=${idc}`:''
         }
