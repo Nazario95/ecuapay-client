@@ -1,5 +1,9 @@
 .qodo
 /dist/js/admin
+/dist/js/app.js
+/dist/js/fbmanifeswebpack.js
+/dist/js/sesion.js
 /s/0/
+/s/login/client.base.min.js
 documentacion.txt
 HOJA DE RUTA PARA FINALIZAR EL PROYECTO.docx
