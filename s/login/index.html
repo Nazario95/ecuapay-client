@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ecuapay</title>
+    <link rel="icon" href="../../dist/img/favicon.ico"> 
     <style>
+        .principal-container{
+            display: grid;
+            min-height: 100dvh;
+            grid-template-rows: auto 1fr auto;
+            overflow-x: hidden;
+        }
+
         .container{
             display: flex;
             justify-content: center;
@@ -45,7 +53,6 @@
             position: absolute;
             background: var(--border-after-color);
             width: 0%;
-            height: 2px;
             bottom: 0;
             left: 0;
             transition: 0.3s;
@@ -84,23 +91,46 @@
            }
 
            .txt-warning{color:darkgoldenrod;}
+
+            .logo-img{
+                    width: 50%;
+                }
+           @media (min-width: 768px){
+                .logo-img{
+                    width: 30%;
+                }
+           }
+            @media (min-width: 930px){
+                .logo-img{
+                    width: 20%;
+                }
+           }
+            
     </style>
 </head>
 <body>
-    <div>
-        <!-- <img src="../../dist/svg/load.svg"> -->
-        <div class="errors txt-warning">            
-        </div>       
-    </div>
+    <div class="principal-container">
 
-    <div id="code-html"></div>
-    <footer>
-        <p>
-            <small>Tech by @Nazzareg (+240) 555-712-824</small>
-        </p>        
-    </footer>
-    <script src="./logbootstrap.min.js" type="module"></script>
-    <!-- <script src="./logbootstrap.js" type="module"></script> -->
+         <div class="gallery-item">
+            <img src="../../dist/img/logo-Ecua-Pay-circulo.webp" class="logo-img">
+        </div>
+
+        <div>
+            <!-- <img src="../../dist/svg/load.svg"> -->
+            <div class="errors txt-warning">            
+            </div>   
+            
+            <div id="code-html"></div>
+        </div>
+
+         <footer>
+            <p>
+                <small>Tech by @Nazzareg (+240) 555-712-824</small>
+            </p>        
+        </footer>
+    </div>
+    <!-- <script src="./logbootstrap.min.js" type="module"></script> -->
+    <script src="./logbootstrap.js" type="module"></script>
     
 </body>    
 </html>

@@ -30,8 +30,8 @@ function loadPage(){
             <p>Acceda a su cuanta</p>    
             <div class="container">
                 <div class="flex-container">               
-                    <div class="form">                
-                        <input class="input a" placeholder="Usuario" required="" type="text">
+                        <div class="form">                
+                            <input class="input a" placeholder="Usuario" required="" type="text">
                             <span class="input-border"></span>               
                         </div>
                         <div class="form">                
@@ -387,10 +387,17 @@ setTimeout(()=>{
         // Obtener ID de la Tarjeta del cliente
         try {
             let res = await getDocs(query(collection(db,'cards'),  where('clientId', "==", id)));
-            res.forEach(card=>{
+            console.log(res)
+            if(res.empty){
+                printMsgDom('info','Error de acceso: No se ha podido localizar la tarjeta de este usuario')
+            }
+            else{
+                res.forEach(card=>{
                 localStorage.clear()
                 localStorage.setItem('card',card.id);
                 localStorage.getItem('card') ? location.href = '../../?login=true':printMsgDom('err','Error al iniciar sesion, contacte con el administrador'); 
             });
-        } catch (error) {return error}         
+            }
+           
+        } catch (error) {console.log(error)}         
     }

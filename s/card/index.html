@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../dist/css/ms-css.css">
     <link rel="stylesheet" href="../../dist/css/form-component.css">
     <link rel="stylesheet" href="../../dist/css/icons.css">
+    <link rel="icon" href="../../dist/img/favicon.ico"> 
     <title>ecuapay</title>
 </head>
 <body class="bg-color">
@@ -144,11 +145,34 @@
                     </div>
                 </div>
             </div>
-            
+
+          
+            <div class="d-flex justify-content-center">
+                <div class="col-11 col-md-6 col-lg-4">
+
+                     <div class="btn-card-details btn d-block my-4 border rounded-2 card-info-btn" data-bs-toggle="modal" data-bs-target="#card-details">
+                        <small>Detalles de la tarjeta</small>
+                    </div>
+
+                    <div class="btn-how-use btn d-block my-4 border rounded-2 card-info-btn" data-bs-toggle="modal" data-bs-target="#card-details">
+                        <small>Como usar</small>
+                    </div>
+
+                    <div class="btn-term-condition btn d-block my-4 border rounded-2 card-info-btn" data-bs-toggle="modal" data-bs-target="#card-details">
+                        <small>Terminos y condiciones de uso de la tarjeta</small>
+                    </div>
+
+                    <div class="btn-logout btn d-block my-4 border rounded-2 card-info-btn">
+                        <small>Cerar sesion</small>
+                    </div>
+                </div>
+            </div>
+         
+
             <!-- TRANSACTIONS -->
             <div class="justify-content-center row mt-4">
                 <div class="col-12 col-md-9 col-lg-6">
-                    <h4 class="text-light text-center">Transacciones</h5>
+                    <h4 class="text-light text-center text-decoration-underline mt-3 mb-4">Transacciones</h5>
                     <div class="accordion container-acordion-items">
                         <!-- Component-accordion -->
                         <div class="accordion-item">
@@ -182,6 +206,32 @@
             
             </div> 
 
+             <!-- MODAL INFO DE TARJETA -->
+             <div class="modal fade" id="card-details" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body bg-color p-0"> 
+                            <!-- btn close -->
+                            <div class="d-flex justify-content-end ">
+                                <button type="button" class="btn-close text-light p-4" data-bs-dismiss="modal" aria-label="Close">
+                                    <h1>x</h1>
+                                </button>                                
+                            </div>
+                            <p class="text-center text-warning txt-titile-card-info"></p> 
+                            <div class="d-flex justify-content-center">
+                                <div class="card-detail-data w-75">
+                                    <img src="../../../dist/svg/load.svg" class="p-5">
+                                </div>
+                            </div>
+
+                            <!-- Terminos de condiciones aqui -->
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+
             <!-- MODAL DE PAGO -->
             <div class="modal fade" id="addSalde" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-fullscreen">
@@ -194,7 +244,7 @@
                             </button>
                         </div>
 
-                        <p class="text-center text-light">Agregar Saldo</p>   
+                        <p class="text-center text-light">Agregar aldo</p>   
                         <!-- FORMULARIO DE PAGO  -->
                         <div class="d-flex justify-content-center mb-5">
                             <div>
@@ -332,5 +382,6 @@
     <script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>  
     <!-- <script src="../../dist/js/app.js" type="module"></script>           -->
     <script src="../../dist/js/app.min.js" type="module"></script>          
+    <!-- <script src="../../dist/js/app.js" type="module"></script>           -->
 </body>
 </html>
