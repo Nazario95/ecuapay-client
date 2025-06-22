@@ -1,10 +1,15 @@
 .qodo
-/dist/js/admin
 /dist/js/app.js
+/dist/js/app.min.js
 /dist/js/fbmanifeswebpack.js
+/dist/js/fbmanifeswebpack.min.js
 /dist/js/sesion.js
-/s/0/
-/s/login/client.base.min.js
+/dist/js/sesion.min.js
+/s/card
+/s/login
+/dist/img
+/index.html
 documentacion.txt
+.gitignore-client
 CNAME
 HOJA DE RUTA PARA FINALIZAR EL PROYECTO.docx
